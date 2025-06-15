@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* estilização do container */
+
+body{
+    background-color: rgb(73, 238, 250);
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.caixa-formulario{
+    background-color: rgb(51, 103, 182);
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    border: 3px solid rgb(175, 14, 224);
+}
+
+.formulario{
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario > h1 {
+    text-align: center;
+    color: rgb(25, 238, 149);
+    text-shadow: 0px 1px 1px black;
+}
+
+.formulario > p {
+    text-align: center;
+    color: rgb(140, 252, 13);
+    text-shadow: 0px 1px 1px black;
+}
+
+h1, p {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input{
+   padding: 10px;
+   border: none;
+   outline: none;
+   border: 2px solid green;
+   border-radius: 50px;
+   width: 400px;
+}
+
+.btn {
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgb(72, 214, 15);
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+input::placeholder{
+    color: rgb(179, 27, 179);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
