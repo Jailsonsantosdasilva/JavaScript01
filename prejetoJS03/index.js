@@ -1,2 +1,9 @@
-document.getElementById('texto').innerHTML = 'Meu primeiro texto em <b>JavaScript</b>';
-console.log("oiiii fudido")
+// DECLARAÇAO DE VARIAVEIS
+var a,b,c;
+
+// ATRIBUIÇAO DOS VALORES
+
+a = 2;
+b = 4;
+c = a + b;
+document.getElementById("texto").innerHTML = c;
