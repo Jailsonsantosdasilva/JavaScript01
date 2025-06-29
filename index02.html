@@ -4,23 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: lightgrey;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+           align-items: center;
+           margin: 0px;
+        }
+
+        div{
+            background-color: white;
+            color: black;
+            padding: 25px;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Emigração</h1>
-    qual o seu pais de origem: <input type="text" name="pais" id="pais">
-    <input type="button" value="verificar" onclick="veri()">
-    <div id="estado"></div>
+    <div>
+        <h1>Emigração</h1>
+        qual o seu pais de origem: <input type="text" name="pais" id="pais">
+        <input type="button" value="verificar" onclick="veri()">
+        <div id="estado"></div>
+    </div>
 
     <script>
         
         function veri() {
-           var pais = 'brsil'
+           var pais = document.getElementById('pais')
            var res = document.getElementById('estado')
+           var pais = String(pais.value)
            if (pais == 'brasil') {
            res.innerHTML = `vocé é brasileiro`
-           } 
-        } else {
+           } else {
             res.innerHTML = `vocé é estrangeiro`
+           }
         }
     </script>
 </body>
