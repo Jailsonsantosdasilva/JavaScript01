@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista</title>
     <link rel="stylesheet" href="css/estilos.css">
-    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/brands.min.css
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
    
 </head>
 <body>
@@ -14,21 +14,13 @@
 
 </header>
 <div class="form">
-    <input type="text" name="" id="" placeholder="Digite sua tarefa">
-    <button>Adicionar</button>
+    <input type="text" name="" id="inputTarefa" placeholder="Digite sua tarefa">
+    <button onclick="addTarefa()" id="btn-add">Adicionar</button>
 </div>
-<main class="arealista" >
-    <div class="item">
-        <div class="item-icone">
-             <i class="fa-regular fa-circle"></i>
-        </div>
-        <div class="item-nome">
-
-        </div>
-        <div class="item-botao">
-
-        </div>
-    </div>
+<main id="arealista" >
+    
 </main>
+
+<script src="js/controle.js"></script>
 </body>
 </html>

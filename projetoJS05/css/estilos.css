@@ -45,7 +45,7 @@ main{
     width: 90%;
     padding: 20px;
     margin: auto auto;
-    border: 1px solid palevioletred;
+   
 }
 
 .item{
@@ -56,17 +56,44 @@ main{
     height: 80px;
     width: 100%;
     box-shadow: 0 0 20px #ccc;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .item-icone{
     flex: 20%;
-    border: 1px solid blue;
+    
+    text-align: center;
+    font-size: 1.5rem;
 }
 .item-nome{
     flex: 55%;
-    border: 1px solid  yellow;
+    
+    font-size: 20px;
+    font-weight: bold;
 }
 .item-botao{
     flex: 25%;
-    border: 1px solid blue;
+    
+}
+
+.delete{
+    background-color: red;
+    border: none;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+}
+
+.fa-circle-check{
+    color: green;
+}
+
+.item.clicado{
+    background-color: #d4f6d9;
+}
+
+.item.clicado .item-nome{
+    text-decoration: line-through;
+    color: gray;
 }
