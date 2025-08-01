@@ -1,13 +1,16 @@
-const pessoa = {
+const pessoaA ={
     nome:"Jailson",
     sobrenome:"santos",
-    dataDenascimento: new date ("11-23-20"),
-    obiterNomeCompleto(){
-        return `${this.nome} ${this.sobrenome}`
-    },
-    obiteAnoNascimento(){
-        return this.dataDenascimento.getFullyear();
-    }
+    idade:19,
 }
-console.log(pessoa.nome);
-console.log(pessoa.sobrenome);
+
+
+// FUNÇÃO CONSTRUTORA
+
+function pessoa (nome, sobrenome,){
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+    this.idade = idade;
+}
+const pessoa1 = ("joao", "silva",idade)
+console.log(pessoa1);
