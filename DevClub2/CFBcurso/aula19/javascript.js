@@ -1,27 +1,17 @@
-const elem = [...document.querySelectorAll(".curso")];
-const btn = document.querySelector("input");
+const caixa1 = document.querySelector("caaixa1")
+const caixa2 = document.querySelector("caaixa2")
+const btn = document.querySelector("btn-copiar")
+const todosCursos = [...document.querySelectorAll(".curso")]
 
-elem.map((e)=>{
-    e.addEventListener('click',(evt)=>{
-        console.log(evt.target);
-        evt.target.classList.toggle("selecionado");
+todosCursos.map((el)=>{
+    el.addEventListener("click",(evt)=>{
+        const curso = evt.target
+        curso.classList.toggle("selecionado")
     })
 })
 
-btn.addEventListener("click",(evt)=>{
-    console.log(evt);
-    const t = [...document.querySelectorAll(".selecionado")];
-    const a = document.querySelector(".output");
-    const b = document.querySelector(".input");
-    t.map((el)=>{
-        a.appendChild(el);
-    })
-    const c = [...a.childNodes];
-    c.map((e)=>{
-        console.log(e);
-        if(e.classList.contains("selecionado") === false){
-            b.appendChild(e);
-        }
-        console.log(e.classList.contains("selecionado"));
-    })
+btn.addEventListener("click", ()=>{
+    const cursosSelecionados = [...document.querySelectorAll(".selecionado")]
+    
+    console.log(cursosSelecionados)
 })
