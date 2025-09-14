@@ -1,29 +1,27 @@
-function adicionarTarefa(){
-    let mensagem = "tarefa adicionada com sucesso";
-//    atribuindo uma variavel
 
-    let inputTarefa = document.getElementById("inputTarefa")
-    // pegando o id do input
-    let tarefa = inputTarefa.value;
-    // pegando ovalor do inpiut
+function adicionarTarefa() {
+  let tarefa = document.getElementById("inputTarefa").value;
 
-     document.getElementById("mensagem").textContent = mensagem;
-    //  adicionando a variavel mensagem no p
+  if (tarefa.trim() === "") {
+    document.getElementById("mensagem").textContent = "Digite uma tarefa!";
+    return;
+  }
 
-     let listaTarefa = document.getElementById("listaTarefas")
-    //  pegando o id do ul
-     let novaTarefa = document.createElement("li")
-    //  criando o elemento li
+  // cria um <li>
+  let li = document.createElement("li");
+  li.textContent = tarefa;
 
-     novaTarefa.textContent = tarefa
-    // mostrando onde coloca o valor do input digitado
-     listaTarefa.appendChild(novaTarefa)
-    //  mostrando onde adicionar o li na ul
-     inputTarefa.value = ""
-    //  zerando depos de adicionar
+  // adiciona na lista
+  document.getElementById("listaTarefas").appendChild(li);
 
-    if(tarefa === ""){
-        alert("digite algo")
-    }
+  // limpa o input
+  document.getElementById("inputTarefa").value = "";
+  document.getElementById("mensagem").textContent = "";
 }
 
+// Detecta quando pressionar Enter dentro do input
+document.getElementById("inputTarefa").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    adicionarTarefa();
+  }
+});
