@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container h1{
+            text-align: center;
+        }
+        .container h2{
+            text-align: center;
+        }
+
+        .box{
+            display: flex;
+        }
+
+        .box .b1{
+            background-color: green;
+            width: 200px;
+            height: 100px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .box .b2{
+            background-color: red;
+            width: 200px;
+            height: 100px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="c1">
+            <h1>Controle de tempo</h1>
+            <h2 id="tempo">0</h2>
+        </div>
+        <div class="box">
+
+                <button class="b1" onclick="ativarContagem()">Ativa Contagem</button>
+
+
+                <button class="b2" onclick="paraContagem()">Para Contagem</button>
+
+        </div>
+    </div>
+    
+
+    <script src="11.js"></script>
+</body>
+</html>
