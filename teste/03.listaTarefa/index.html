@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="container">
-        <h1>Lista de tarfea</h1>
-        <input type="text" id="inputTexto" placeholder="Digite sua tarefa">
-        <button onclick="AdiconarBtn()">Adicionar</button>
+    <header>
+        <h1>lista de tarefas</h1>
+        <form>
+            <input type="text" placeholder="digite sua tarefa" id="textoinput">
+            <button onclick="btnadd()" class="btnadd">adicionar</button>
+        </form>
     </header>
 
     <main>
-        <ul id="lista"></ul>
+        <ul class="lista">
+            <!-- <li>Ja deu o like <span>❌</span></li> -->
+            
+        </ul>
     </main>
 
     <script src="script.js"></script>
