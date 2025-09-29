@@ -1,0 +1,1 @@
+console.log(Math.max(3,6,8,10))
