@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>logica de progrmação</h1>
+    <button onclick="soma()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+
+    <div id="output"></div>
+
+    <script>
+        let numeroDigitado = prompt("digite um numero");
+        numeroDigitado = parseFloat(numeroDigitado);
+            
+        function calculo(){
+            let output = document.getElementById("output");
+            output.innerHTML = numeroDigitado;
+        }
+        calculo()
+
+       function soma(){
+        let numerodigitado2 = prompt("digite outro numero");
+        numerodigitado2 = parseFloat(numerodigitado2);
+
+        numeroDigitado = numeroDigitado + numerodigitado2;
+        calculo();
+       }
+
+       function subtrair(){
+        let numerodigitado2 = prompt("digite outro numero");
+        numerodigitado2 = parseFloat(numerodigitado2);
+
+        numeroDigitado = numeroDigitado - numerodigitado2;
+        calculo();
+       }
+
+       function multiplicar(){
+        let numerodigitado2 = prompt("digite outro numero");
+        numerodigitado2 = parseFloat(numerodigitado2);
+
+        numeroDigitado = numeroDigitado * numerodigitado2;
+        calculo();
+       }
+
+       function dividir(){
+        let numerodigitado2 = prompt("digite outro numero");
+        numerodigitado2 = parseFloat(numerodigitado2);
+
+        numeroDigitado = numeroDigitado / numerodigitado2;
+        calculo();
+       }
+    </script>
+</html>
