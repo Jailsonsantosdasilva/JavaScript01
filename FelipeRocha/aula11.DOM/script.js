@@ -22,32 +22,38 @@
 // btnAlterado.style.backgroundColor = "red"
 // btnAlterado.style.fontSize = "50px"
 
-const btn = document.querySelector(".btn");
-const nome = document.querySelector("#name");
-const email = document.querySelector("#email");
-const formulario = document.getElementById("my-form")
-const item = document.querySelector('.items');
-const body = document.querySelector("body");
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const submitButton = document.querySelector('#submit-button');
 
-btn.addEventListener("click", function(event){
-event.preventDefault();
+const errorMessage = document.querySelector('.msg');
 
-    const nomeValue = nome.value;
-    const emailValue = email.value;
+const items = document.querySelector('.items');
 
-    console.log(nomeValue)
-    console.log(emailValue)
+submitButton.addEventListener("click", (e) =>{
+    e.preventDefault()
 
-    if(nomeValue === '' || emailValue === ''){
-       return alert("Por favor, Digite seu nome é email")
+    const nameValue = nameInput.value;
+    const emailValue = emailInput.value;
+
+    if(nameValue === "" || emailValue === ''){
+        errorMessage.textContent = 'Pleassemfill out the fields';
+        errorMessage.classList ='error';
+        setTimeout(() => {
+            errorMessage.textContent = "";
+            errorMessage.classList = ''
+        }, 3000);
+
+        return;
     }
 
-    formulario.style.backgroundColor = "red"
+    const li = document.createElement('li');
+    li.classList = 'item';
+    li.innerHTML = `Nome: ${nameValue}<br/> Email: ${emailValue}`
 
-    item.firstElementChild.textContent = nomeValue
+    items.appendChild(li)
 
-    item.children[1].textContent = emailValue
-
-    body.style.backgroundColor = '#ccc'
+    
+    document.querySelector('#name').value = "";
+    document.querySelector('#email').value = "";
 });
-
