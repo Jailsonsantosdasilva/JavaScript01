@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p class="texto"></p>
+
+    <script>
+        let Produtos = {
+            nome: "sabonete",
+            preço: 29,
+            unidade: "50"
+        };
+
+        let texto = document.querySelector(".texto");
+
+        let nome = Produtos.nome;
+        let nome2 = Produtos.preço;
+        let nome3 = Produtos.unidade;
+
+        texto.innerHTML = `nome: ${nome} preço: ${nome2} e unidade ${nome3}`
+
+    </script>
+</body>
+</html>
