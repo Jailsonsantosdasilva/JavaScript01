@@ -1,2 +1,2 @@
 # JavaScript
-projetos de javascript
+Estudos de javascript
