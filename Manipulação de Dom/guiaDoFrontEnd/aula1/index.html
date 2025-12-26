@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação do DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <h2 class="h2">Manipulação do DOM</h2>
+        <p class="texto">Texto para ser alterado</p>
+        <img src="https://preview.redd.it/the-most-random-image-every-seen-in-the-history-of-the-v0-iuzrc59aw2sb1.jpg?width=1024&format=pjpg&auto=webp&s=dd018a25303363415b10f1906c2d4b25fa47043f" alt="" class="img">
+        <button onclick="btnAlterar()">Alterar texto</button>
+        <button onclick="btnCor()">Alterar cor</button>
+        <button onclick="btnImg()">Alterar img</button>
+    </div>
+    
+
+
+    <script>
+
+        let texto = document.querySelector(".texto");
+        let h2 = document.querySelector(".h2");
+        let img = document.querySelector(".img");
+
+        function btnAlterar(){
+            texto.textContent = "texto alterado"
+            texto.style.border = "1px solid red"
+        }
+
+        function btnCor(){
+            // h2.style.backgroundColor = "red"
+            if(h2.style.backgroundColor === "lightgray"){
+                h2.style.backgroundColor = "black"
+            }else {
+                h2.style.backgroundColor = "lightgray"
+            }
+        }
+
+        function btnImg(){
+            // img.src = "https://www.ifoto.ai/_nuxt/img/demo_3_3.24fd874.webp"
+
+            if(img.src === "https://preview.redd.it/the-most-random-image-every-seen-in-the-history-of-the-v0-iuzrc59aw2sb1.jpg?width=1024&format=pjpg&auto=webp&s=dd018a25303363415b10f1906c2d4b25fa47043f"){
+                img.src = "https://www.ifoto.ai/_nuxt/img/demo_3_3.24fd874.webp"
+            }else{
+                img.src = "https://preview.redd.it/the-most-random-image-every-seen-in-the-history-of-the-v0-iuzrc59aw2sb1.jpg?width=1024&format=pjpg&auto=webp&s=dd018a25303363415b10f1906c2d4b25fa47043f"
+            }
+        }
+
+
+    </script>
+</body>
+</html>

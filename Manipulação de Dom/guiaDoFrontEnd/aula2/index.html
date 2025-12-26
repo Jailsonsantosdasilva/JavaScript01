@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>mainipulando o DOM com Javascrit e formulario</h1>
+
+    <form action="">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" onkeyup="receberNome(this)">
+        </div>
+
+        <div>
+            <label for="nota1">Nota 1:</label>
+            <input type="number" name="nota1" id="nota1" onkeyup="receberNota1(this)">
+        </div>
+
+        <div>
+            <label for="nota2">Nota 2:</label>
+            <input type="number" name="nota2" id="nota2" onkeyup="receberNota2(this)">
+        </div>
+
+        <div>
+            <button type="button" onclick="calcular()">Calcular Média</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <section>
+        <span id="spn-nome"></span>
+        <span id="spn-nota1"></span>
+        <span id="spn-nota2"></span>
+    </section>
+
+    <section>
+        <span id="spn-media">
+
+        </span>
+    </section>
+
+
+    <script>
+        function receberNome(resposta){
+            let span = document.getElementById("spn-nome").textContent = resposta.value
+        }
+
+        function receberNota1(resposta){
+            let nota1 = document.getElementById("spn-nota1").textContent = resposta.value
+        }
+
+        function receberNota2(resposta){
+            let span = document.getElementById("spn-nota2").textContent = resposta.value
+        }
+
+        function calcular(){
+            let calculoNota1 = document.getElementById("spn-nota1").textContent;
+            let calculoNota2 = document.getElementById("spn-nota2").textContent;
+            let spnMedia = document.getElementById("spn-media");
+            let media = (parseInt(calculoNota1) + parseInt(calculoNota2)) / 2;
+
+
+            spnMedia.innerHTML = media
+
+        }
+    </script>
+</body>
+</html>
