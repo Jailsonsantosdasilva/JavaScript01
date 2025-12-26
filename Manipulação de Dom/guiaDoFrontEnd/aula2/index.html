@@ -27,6 +27,17 @@
         <div>
             <button type="button" onclick="calcular()">Calcular Média</button>
         </div>
+
+       <div>
+           <select name="cores" id="cores" onchange="cor(this)">
+            <option value="black">
+                escolha uma cor
+            </option>
+                <option value="red">vermelho</option>
+                <option value="green">verde</option>
+                <option value="blue">azul</option>
+            </select>
+       </div>
     </form>
 
     <hr>
@@ -41,6 +52,10 @@
         <span id="spn-media">
 
         </span>
+    </section>
+
+    <section>
+ 
     </section>
 
 
@@ -65,7 +80,10 @@
 
 
             spnMedia.innerHTML = media
+        }
 
+        function cor(resposta){
+            let nome = document.getElementById("spn-nome").style.color = resposta.value
         }
     </script>
 </body>
