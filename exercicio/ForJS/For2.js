@@ -1,0 +1,15 @@
+// for(let i = 1; i <= 5; i++){
+//    console.log(`numero ${i}`)
+// }
+
+// usando For com array
+
+// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// for (i = 0; i < array.length; i++){
+//     console.log(array[i])
+// }
+
+for (let NIX = 1; NIX <= 20; NIX *= 2 ){
+    console.log(NIX)
+}
