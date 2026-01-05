@@ -1,68 +1,61 @@
 const form = document.querySelector(".form");
-const campos = document.querySelectorAll(".required");
-const spans = document.querySelectorAll(".span-required");
+const input = document.querySelectorAll(".input");
+const spans = document.querySelectorAll(".spans-box");
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+form.addEventListener("submit", (e)=>{
+    e.preventDefault()
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    nomevalidacao();
+    emailvalidado();
+    senhavalidacao();
+    senhaigual();
 
-    const nomeValido  = validarNome();
-    const emailValido = validarEmail();
-    const senhaValida = validarSenha();
-    const senhasIguais = validarConfirmacaoSenha();
+    
+  const temErro = [...spans].some(span => span.style.display === "block");
 
-    if (nomeValido && emailValido && senhaValida && senhasIguais) {
-        console.log("Formulário válido ✅");
-        form.submit(); // envia o formulário
-    }
-});
+    if (!temErro) {
+    alert("Formulário enviado com sucesso!");
+    form.submit();
+  }
+})
 
-function setError(index) {
-    campos[index].style.border = "2px solid red";
-    spans[index].style.display = "block";
+function setError(i){
+    spans[i].style.display = "block"
 }
 
-function removeError(index) {
-    campos[index].style.border = "";
-    spans[index].style.display = "none";
+function validado(i){
+    spans[i].style.display = ""
 }
 
-function validarNome() {
-    if (campos[0].value.trim().length < 3) {
-        setError(0);
-        return false;
+function nomevalidacao(){
+    if(input[0].value.length >= 4){
+        validado(0)
+    }else{
+        setError(0)
     }
-    removeError(0);
-    return true;
 }
 
-function validarEmail() {
-    if (!emailRegex.test(campos[1].value)) {
-        setError(1);
-        return false;
+function emailvalidado(){
+    if(emailRegex.test(input[1].value)){
+        validado(1)
+    }else{
+        setError(1)
     }
-    removeError(1);
-    return true;
 }
 
-function validarSenha() {
-    if (campos[2].value.length < 8) {
-        setError(2);
-        return false;
+function senhavalidacao(){
+    if(input[2].value.length >= 8){
+        validado(2)
+    }else{
+        setError(2)
     }
-    removeError(2);
-    return true;
 }
 
-function validarConfirmacaoSenha() {
-    if (
-        campos[2].value !== campos[3].value ||
-        campos[3].value.length < 8
-    ) {
-        setError(3);
-        return false;
+function senhaigual(){
+    if(input[2].value == input[3].value && input[3].value.length >= 8){
+        validado(3)
+    }else{
+        setError(3)
     }
-    removeError(3);
-    return true;
 }

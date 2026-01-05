@@ -8,92 +8,26 @@
 </head>
 <body>
     
-    <div class="content">
-
-        <h1>Formulario</h1>
-
+    <div class="container">
         <form class="form">
-
-            <div>
+            <div class="boxinput">
+                <input type="text" placeholder="Digite seu nome" class="input" oninput="nomevalidacao()">
+                <span class="spans-box">seu nome deve ter 4 caracteres</span>
+            </div>
+            <div class="boxinput">
+                <input type="email" placeholder="Digite seu email" class="input" oninput="emailvalidado()">
+                <span class="spans-box">digite um email valido</span>
+            </div>
+            <div class="boxinput">
+                <input type="password" placeholder="Digite uma senha" class="input" oninput="senhavalidacao()">
+                <span class="spans-box">sua senha deve ter 8 numeros</span>
+            </div>
+                <input type="password" placeholder="confirme sua senha" class="input" oninput="senhaigual()">
+                <span class="spans-box">senha precisa ser iguais</span>
                 
-                <input type="text" placeholder="Digite seu nome" class="inputs required" oninput="nomeValidacao()">
-                <span class="span-required">Nome deve ter no minino 3 caracteres</span>
-                
-            </div>
-
-            <div>
-
-                <input type="email" placeholder="Digite seu email" class="inputs required" oninput="emailValidacao()">
-                <span class="span-required">Digite um email valido</span>
-
-            </div>
-
-            <div>
-
-                <input type="password" placeholder="Digite sua senha" class="inputs required" oninput="senhaValidacao()">
-                <span class="span-required">Digite uma senha no  minino com 8 caracteres</span>
-
-            </div>
-
-            <div>
-
-                <input type="password" placeholder="Confirme sua senha" class="inputs required" oninput="compareSenha()">
-                <span class="span-required">Senhas devem ser compativeis</span>
-
-            </div>
-
-            <textarea name="descricao" id="descricao" cols="25" rows="5" placeholder="Fale mais sobre vocé" class="inputs"></textarea>
-
-            <p>sexo:</p>
-
-            <div class="box-select">
-
-                <div>
-                    <input type="radio" name="sexo" id="m" value="m">
-                    <label for="m">Masculino</label>
-                    
-                </div>
-
-                <div>
-                    <input type="radio" name="sexo" id="f" value="f">
-                    <label for="f">Feminino</label>
-
-                </div>
-
-                <div>
-                    <input type="radio" name="sexo" id="o" value="o">
-                    <label for="o">Outros</label>
-
-                </div>
-
-            </div>
-
-            <p>Quais suas experiencia?</p>
-
-            <div class="box-select">
-
-                <div>
-                    <input type="checkbox" name="experiencia" id="html" value="html">
-                    <label for="html">HTML</label>
-                    
-                </div>
-
-                <div>
-                    <input type="checkbox" name="experiencia" id="css" value="css">
-                    <label for="css">CSS</label>
-
-                </div>
-
-                <div>
-                    <input type="checkbox" name="experiencia" id="js" value="js">
-                    <label for="js">Javascript</label>
-
-                </div>
-
             </div>
             <button type="submit">Enviar</button>
         </form>
-
     </div>
 
 

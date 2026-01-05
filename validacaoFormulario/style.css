@@ -4,109 +4,33 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-}
-
-:root {
-  --green-50:  #eaf7ef;
-  --green-100: #cfeedd;
-  --green-200: #a8dfc1;
-  --green-300: #7ccfa3;
-  --green-400: #4fbf85;
-  --green-500: #2fa56a;
-  --green-600: #248a58;
-  --green-700: #1c6f47;
-  --green-800: #155637;
-  --green-900: #0f3d28;
+    font-family: "Poppins", sans-serif;
 }
 
 body{
-    width: 100%;
+    background-color: lightgray;
     min-height: 100vh;
-    background-color: var(--green-800);
-    color: #ffffff;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: auto;
 }
 
-.content{
-    background-color:var(--green-900);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.325);
-    max-width: 350px;
-    width: 100%;
-    margin: 2rem;
-}
-
-.content h1{
-    text-align: center;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid #ffffff;
-    text-transform: uppercase;
-}
-
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.form span{
-    display: none;
-    margin-top: .5rem;
-    font-size: .7rem;
-    color: red;
-    padding: 0rem .5rem;
-}
-
-.inputs{
-    max-width: 100%;
-    width: 100%;
-    padding: .5rem;
-    border: 2px solid transparent;
-    outline: none;
-    border-radius: 6px;
-    transition: box-shadow .4s ease-in-out, border .3s ease-in-out;
-}
-
-.inputs:focus{
-    border: 2px solid var(--green-600);
-    box-shadow: 0px 0px 7px 4px var(--green-400);
-}
-
-.box-select{
-    display: flex;
-    justify-content:space-between;
-    accent-color: var(--green-400);
-    font-weight: bold;
-    gap: .5rem;
-}
-
-button{
-    height: 45px;
+.container{
+    background-color: #fff;
+    padding: 1rem;
     border-radius: 8px;
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    font-weight: bold;
-    background-color: var(--green-400);
-    color: #ffffff;
-    cursor: pointer;
-    transition:background-color .3s ease-in-out, box-shadow .4s ease-in-out ;
+    text-align: center;
 }
 
-button:hover{
-        background-color: var(--green-700);
-        box-shadow:  0px 0px 5px 5px var(--green-400);
+.boxinput{
+    margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 408px){
-.box-select{
-    flex-direction: column;
-    gap: .2rem;
-}
-
+.spans-box{
+ display: none;
+ font-size: .6rem;
+ margin-top: .5rem;
+ color: red;
 }
