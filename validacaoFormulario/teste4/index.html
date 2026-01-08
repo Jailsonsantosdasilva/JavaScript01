@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>cadatras</h1>
+        <form class="form">
+            
+            <div class="input-box">
+                <input type="text" placeholder="Nome" oninput="inputvalido()">
+                <span class="span-erro">seu nome deve ter 5 caracteres</span>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Usuario" oninput="usuarioValido()">
+                <span class="span-erro">usuario deve ter 5 caracteres</span>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Senha" oninput="senhaValido()">
+                <span class="span-erro">senha deve ter 8 numeros</span>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Confirma senha" oninput="senhasIgual()">
+                <span class="span-erro">senha invalida</span>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
