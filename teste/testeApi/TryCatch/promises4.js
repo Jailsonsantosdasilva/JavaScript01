@@ -18,9 +18,9 @@ const getUserInfo = async (id) => {
 
     const usersData = await Promise.all([
 
-        await getUserInfo(1),
-        await getUserInfo(2),
-        await getUserInfo(3),
+        getUserInfo(1),
+        getUserInfo(2),
+        getUserInfo(3)
 
     ])
 
